@@ -8,7 +8,7 @@ export default function SignupForm({ submitFunction }) {
                 <input type='email' name='signupEmail'></input>
                 <label htmlFor='signupPassword'>Password</label>
                 <input type='password' name='signupPassword'></input>
-                <button>Sign up</button>
+                <input type="submit"/>
             </form>
         </div>
     )

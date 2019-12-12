@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+body{
+    text-align: center;
+}
+
 .header{
     margin: 0 auto;
     border-bottom: 2px solid black;
@@ -28,4 +32,22 @@
     border-radius: 5px;
     border: thin solid #888;
     padding: 10px 8px;
+}
+
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+img{
+    width: 110px;
 }

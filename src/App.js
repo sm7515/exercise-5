@@ -22,20 +22,9 @@ const firebaseConfig = {
   appId: "1:498695920220:web:0e3f58432731a61fa96499",
   measurementId: "G-Y55C120YPY"
 };
-
-const uiConfig = ({
-  signInSuccessUrl: '/',
-  signInFlow: 'popup',
-  signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-  ],
-})
-
 function App() {
   const [loggedIn,setLoggedIn]=useState(false);
   const [user,setUser]=useState({});
-  const [error,setError]=useState("");
 
   useEffect(()=>{
     if(!firebase.apps.length)
@@ -84,7 +73,6 @@ function App() {
       .catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
-        setError("errorMessage");
         console.log(errorCode, errorMessage);
     });
   }
@@ -105,7 +93,6 @@ function App() {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      setError("errorMessage");
       console.log(errorCode, errorMessage);
     });
   }
@@ -126,7 +113,6 @@ function App() {
       var email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       var credential = error.credential;
-      setError("errorMessage");
     });
   }
 
@@ -140,7 +126,6 @@ function App() {
     }).catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      setError("errorMessage");
       console.log(errorCode, errorMessage);
     });
   }
